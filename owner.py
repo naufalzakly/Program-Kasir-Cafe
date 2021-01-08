@@ -15,9 +15,9 @@ class dataOwner(connect):
             return False
 
     def validasi(self):
-        query = "SELECT * FROM `owner`"
-        self.__res = self.executeSelectOne(query)
-        return (self.__res)
+        query = "SELECT * FROM owner"
+        res = self.executeSelectOne(query)
+        return (res)
 
     def show(self):
         query = "SELECT idowner,namaowner FROM owner"

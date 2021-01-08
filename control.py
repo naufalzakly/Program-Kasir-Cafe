@@ -10,15 +10,14 @@ import getpass
 import texttable as tt
 
 
-class transaksiKasir:
+class transaksikaryawan:
     nama = ""
     namakaryawan = ""
-    def namaTransaksi(self):
-        self.nama = None
-        self.namakaryawan = None
-        self.nama = str(input("Input Di Sini => "))
+    def namaTransaksi(self,a):
+        self.nama = a
         r = dataPelanggan()
         r.insert(self.nama)
+        # self.nama = str(input("Input Di Sini => "))
 
 
     def tempNama(self,a,b):

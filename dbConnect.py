@@ -30,9 +30,9 @@ class connect:
             self.con = sqlite3.connect('myDb.db')
             cursor = self.con.cursor()
             cursor.execute(query)
-            record = cursor.fetcone()
+            recordd = cursor.fetchone()
             # print("success")
-            return record
+            return recordd
         except Error as e:
             print(e)
 

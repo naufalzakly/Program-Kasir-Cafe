@@ -40,10 +40,10 @@ class dataKaryawan(connect):
         tab.set_cols_dtype(['a','a','a','a'])
         print(tab.draw())
 
-    def insert(self,usernamekaryawan, passkaryawan, namakaryawan, alamat, gaji, tahun_masuk):
-        query = "INSERT INTO karyawan (usernamekaryawan, passkaryawan, namakaryawan, alamat, gaji, tahun_masuk) \
+    def insert(self,usernamekaryawan, passkaryawan, namakaryawan, alamat):
+        query = "INSERT INTO karyawan (usernamekaryawan, passkaryawan, namakaryawan, alamat) \
             VALUES (\'%s\', \'%s\', \'%s\', \'%s\', \'%s\', \'%s\')"
-        query = query % (usernamekaryawan, passkaryawan, namakaryawan, alamat, gaji, tahun_masuk)
+        query = query % (usernamekaryawan, passkaryawan, namakaryawan, alamat)
         self.execute(query)
 
     def update(self):
