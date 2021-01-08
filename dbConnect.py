@@ -5,7 +5,7 @@ class connect:
     def __init__(self):
         self.con  = None
 
-    def executeInsert(self,query):
+    def execute(self,query):
         try:
             self.con = sqlite3.connect('myDb.db')
             cursor = self.con.cursor()
@@ -21,8 +21,23 @@ class connect:
             cursor = self.con.cursor()
             cursor.execute(query)
             record = cursor.fetchall()
-            print("success")
+            # print("success")
+            return record
+        except Error as e:
+            print(e)
+    def executeSelectOne(self,query):
+        try:
+            self.con = sqlite3.connect('myDb.db')
+            cursor = self.con.cursor()
+            cursor.execute(query)
+            record = cursor.fetcone()
+            # print("success")
             return record
         except Error as e:
             print(e)
 
+    def update(self):
+        pass
+
+    def delete(self):
+        pass
