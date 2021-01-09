@@ -332,7 +332,7 @@ class Sistem:
         nama = str(input("\nMasukkan Nama Pelanggan: "))
         print(d2.cekNama(nama))
         if d2.cekNama(nama) == None:
-            d1.namaTransaksi(nama,self.a)
+            d1.namaTransaksi(nama(self.a))
             d1.doTransaksi()
         else:
             d1.tempNama(nama,self.a)

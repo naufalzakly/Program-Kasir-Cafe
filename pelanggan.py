@@ -33,7 +33,7 @@ class dataPelanggan(connect):
     def insert(self,a):
         self.__a = a
         self.query = "INSERT INTO pelanggan(namapelanggan) VALUES('{}')".format(self.__a)
-        self.execute(self.__query)
+        self.execute(self.query)
         print("Berhasil memasukkan data")
 
     def update(self):
